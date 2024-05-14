@@ -20,4 +20,4 @@ EXPOSE 8080
 
 USER node
 
-CMD ["pm2", "start", "process.yml", "&&", "tail", "-f", "/dev/null"]
+CMD ["pm2-runtime", "process.yml"]
