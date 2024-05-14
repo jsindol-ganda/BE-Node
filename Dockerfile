@@ -11,7 +11,7 @@ COPY . .
 RUN npm install
 
 # Installing pm2 globally
-RUN npm install pm2 -g
+# RUN npm install pm2 -g
 
 # Starting our application
 # CMD pm2 start process.yml && tail -f /dev/null
@@ -20,4 +20,4 @@ EXPOSE 8080
 
 USER node
 
-CMD ["pm2-runtime", "process.yml"]
+CMD ["node", "src/index.js"]
