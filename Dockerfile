@@ -2,14 +2,15 @@ FROM node:18-alpine as BUILD_IMAGE
 
 WORKDIR /app_be
 
-ENV NODE_ENV 'production'
-
 RUN chown -R node:node /app_be
 
-COPY . .
+ENV NODE_ENV 'production'
+
+COPY package.json ./
 
 RUN npm install
 
+COPY . .
 # Installing pm2 globally
 # RUN npm install pm2 -g
 
