@@ -14,10 +14,10 @@ RUN npm install
 RUN npm install pm2 -g
 
 # Starting our application
-CMD pm2 start process.yml && tail -f /dev/null
+# CMD pm2 start process.yml && tail -f /dev/null
 
 EXPOSE 8080
 
 USER node
 
-CMD ["node", "src/index.js"]
+CMD ["pm2", "start", "process.yml", "&&", "tail", "-f", "/dev/null"]
