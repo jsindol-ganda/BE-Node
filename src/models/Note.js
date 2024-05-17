@@ -8,10 +8,11 @@ export class Note {
      * @param {string} desc 
      * @param {Date} date 
      */
-    constructor(id, title, desc, date) {
+    constructor(id, title, desc, date, isChecked) {
         this.id = id;
         this.title = title;
         this.desc = desc;
         this.date = date;
+        this.isChecked = isChecked;
     }
 }
